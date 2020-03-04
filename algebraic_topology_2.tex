@@ -1,0 +1,109 @@
+\documentclass[psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage{semantic}
+\usepackage{fullpage}
+\usepackage{tikz-cd}
+\usepackage{todonotes}
+\usepackage{physics}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{theoremref}
+\usepackage{graphicx}
+\usepackage[bookmarks]{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+\newtheorem{innercustomexer}{Exercise}
+\newenvironment{customexer}[1]
+  {\renewcommand\theinnercustomexer{#1}\innercustomexer}
+  {\endinnercustomexer}
+
+\newtheorem{innercustomprob}{Problem}
+\newenvironment{customprob}[1]
+  {\renewcommand\theinnercustomprob{#1}\innercustomprob}
+  {\endinnercustomprob}
+
+\newtheorem{innercustomthm}{Proposition}
+\newenvironment{customthm}[1]
+  {\renewcommand\theinnercustomthm{#1}\innercustomthm}
+  {\endinnercustomthm}
+
+\theoremstyle{remar}
+\newtheorem*{rem}{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\RP}{\mathbb{R}\mathbb{P}}
+\DeclareMathOperator{\CP}{\mathbb{C}\mathbb{P}}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\bd}{bd}
+\DeclareMathOperator{\supp}{supp}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\title{Algebraic Topology II Lecture Notes}
+\author{Hidenori Shinohara}
+
+\maketitle
+\tableofcontents
+
+\section{Poincare Duality}
+
+Since $H^{\ast}(T^n) \equiv \wedge_{\mathbb{Z}} M$ where $M = \ev{ v_1, \cdots, v_n }$, we have
+
+\begin{center}
+  \begin{tabular}{| l | l | l | l | l | l | l |} \hline
+    $k$                          & 0 & 1 & 2 & $\cdots$ & $n - 1$  & $n$ \\ \hline
+    $\rank H^k(T^n; \mathbb{Z})$ & $\binom{n}{0}$ & $\binom{n}{1}$ & $\binom{n}{2}$ & $\cdots$ & $\binom{n}{n - 1}$ & $\binom{n}{n}$ \\ \hline
+  \end{tabular}
+\end{center}
+
+This symmetry phenomenon is true in general and very useful.
+Another example: The cellular complex for $\CP^n$ is $\mathbb{Z} \rightarrow 0 \rightarrow \mathbb{Z} \rightarrow 0 \rightarrow \cdots \rightarrow 0 \rightarrow \mathbb{Z}$.
+Thus
+
+\begin{center}
+  \begin{tabular}{| l | l | l | l | l | l | l |} \hline
+    $k$                          & 0 & 1 & 2 & $\cdots$ & $2n - 1$  & $2n$ \\ \hline
+    $\rank H^k(\CP^n; \mathbb{Z})$ & 1 & 0 & 1 & $\cdots$ & 0         & 1 \\
+    \hline
+  \end{tabular}
+\end{center}
+
+
+\end{document}
