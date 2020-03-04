@@ -66,6 +66,7 @@
 \DeclareMathOperator{\Int}{Int}
 \DeclareMathOperator{\bd}{bd}
 \DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\sgn}{sgn}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -94,7 +95,7 @@ Since $H^{\ast}(T^n) \equiv \wedge_{\mathbb{Z}} M$ where $M = \ev{ v_1, \cdots, 
 \end{center}
 
 This symmetry phenomenon is true in general and very useful.
-Another example: The cellular complex for $\CP^n$ is $\mathbb{Z} \rightarrow 0 \rightarrow \mathbb{Z} \rightarrow 0 \rightarrow \cdots \rightarrow 0 \rightarrow \mathbb{Z}$.
+Another example: The cellular complex for $\CP^n$ is $\mathbb{Z} \rightarrow 0 \rightarrow \mathbb{Z} \rightarrow 0 \rightarrow \cdots \rightarrow 0 \rightarrow \mathbb{Z} \rightarrow 0$.
 Thus
 
 \begin{center}
@@ -105,5 +106,44 @@ Thus
   \end{tabular}
 \end{center}
 
+\subsection{Orientations}
+
+\begin{defn}
+  Let $M$ be a triangulable closed $n$-manifold.
+  Let $\sigma_1, \cdots, \sigma_k$ be $n$-simplices such that $M = \sigma_1 \cup \cdots \cup \sigma_k$.
+  Then $\sigma_i \in C_n(M)$ for each $i$.
+  Suppose that the ordering of the vertices in $\sigma_i$ and the signs $\pm$ can be chosen such that
+  \begin{align*}
+    \sum \pm \partial \sigma_i = 0 \in C_{n - 1}(M).
+  \end{align*}
+  Then $M$ is said to be \textit{orientable}.
+\end{defn}
+
+\begin{exmp}
+  A tetrahedron and torus are examples of orientable manifolds.
+  \begin{figure}[!htb]
+    \includegraphics[width=.5\linewidth]{img/orientation_tetrahedron.jpeg}
+    \caption{Orientation of a tetrahedron}
+    \label{fig:orientation_tetrahedron}
+  \end{figure}
+\end{exmp}
+
+\begin{defn}
+  Let $M$ be an $n$-dimensional orientable manifold.
+  Choose $\sigma_i \in C_n(M)$ and signs $\sgn_i \in \{ -1, 1 \}$ such that $M = \sigma_1 \cup \cdots \cup \sigma_k$ and $\sum \sgn_i \partial \sigma_i = 0$.
+  The class represented by $\sum \sgn_i \sigma_i \in \ker(\partial)$ in $H_n(M)$ is called a fundamental class $[M]$.
+\end{defn}
+
+\begin{thm}
+  If $M$ connected, then $[M]$ is a generator of $H_n(M)$.
+\end{thm}
+
+\begin{proof}
+  By Poincare Duality, $H_n(M) \cong H^0(M) = \mathbb{Z}$.
+  Let $\sum c_i \sigma_i$ represent a generator of $H_n(M)$ where $c_i \in \mathbb{Z}$.
+  Then $\sum \sgn_i \sigma_i = \lambda\sum c_i \sigma_i = \sum (\lambda c_i) \sigma_i$ for some $\lambda \in \mathbb{Z}$.
+  Since each $\lambda c_i = \sgn_i \in \{ -1, 1 \}$, $\lambda$ must be 1 or -1.
+  Therefore, the class represented by $\sum \sgn_i \sigma_i$ is a generator of $H_n(M)$.
+\end{proof}
 
 \end{document}
