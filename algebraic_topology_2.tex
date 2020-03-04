@@ -134,7 +134,7 @@ Thus
   The class represented by $\sum \sgn_i \sigma_i \in \ker(\partial)$ in $H_n(M)$ is called a fundamental class $[M]$.
 \end{defn}
 
-\begin{thm}
+\begin{thm}\label{fundamental_class_generator}
   If $M$ connected, then $[M]$ is a generator of $H_n(M)$.
 \end{thm}
 
@@ -145,5 +145,31 @@ Thus
   Since each $\lambda c_i = \sgn_i \in \{ -1, 1 \}$, $\lambda$ must be 1 or -1.
   Therefore, the class represented by $\sum \sgn_i \sigma_i$ is a generator of $H_n(M)$.
 \end{proof}
+
+\begin{cor}
+  There are two fundamental classes for any connected orientable manifold.
+\end{cor}
+
+\begin{proof}
+  By (\ref{fundamental_class_generator}), a fundamental class $[M]$ is a generator of $H_n(M) = \mathbb{Z}$.
+  Since $\mathbb{Z}$ has exactly two generators $1, -1$, $M$ has exactly two fundamental classes.
+\end{proof}
+
+\begin{defn}
+  Let $M$ be a connected, orientable manifold.
+  Then a choice of a fundamental class is called an orientation of $M$.
+\end{defn}
+
+\subsection{Poincare Duality(Version 1)}
+
+\begin{thm}
+  If $M$ is an orientable closed $n$-manifold, then
+  \begin{align*}
+    H^k(M; G) \cong H_{n - k}(M; G)
+  \end{align*}
+  for any $k$ and an abelian group $G$.
+\end{thm}
+
+
 
 \end{document}
