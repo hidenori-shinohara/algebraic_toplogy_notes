@@ -208,4 +208,19 @@ Thus
   Therefore, $b_k = \rank(H^k(M)) = \rank(H_{n - k}(M)) = \rank(H^{n - k}(M)) = b_{n - k}$.
 \end{proof}
 
+\subsection{Cap Products}
+There is a nice way to explicitly write down the isomorphism when $G$ is a commutative ring.
+
+\begin{defn}
+  Let a space $X$ and a commutative ring $R$ be given.
+  For any $k \geq l$, define the cap product
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      \frown: & C_k(X; R) \otimes C^l(X; R) \arrow[r] & C_{k - l}(X; R) \\
+              & \sigma \otimes \phi \arrow[r, maps to]         & \phi(\sigma\vert_{[v_0,\cdots,v_l]})\sigma\vert_{[v_l, \cdots, v_k]}
+    \end{tikzcd}
+  \end{center}
+\end{defn}
+
+
 \end{document}
