@@ -194,5 +194,18 @@ Thus
   so Poincare Duality holds in this case.
 \end{rem}
 
+\begin{defn}
+  The $k$th Betti number of a manifold $M$ is defined to be $b_k = \rank(H^k(M; \mathbb{Z}))$.
+\end{defn}
+
+\begin{thm}
+  $b_k = b_{n - k}$ for all $k$ if $M$ is a closed orientable $n$-manifold.
+\end{thm}
+
+\begin{proof}
+  By the Universal Coefficient Theorem, $\rank(H^k(M)) = \rank(H_k(M))$.
+  By Poincare Duality, $\rank(H^k(M)) = \rank(H_{n - k}(M))$.
+  Therefore, $b_k = \rank(H^k(M)) = \rank(H_{n - k}(M)) = \rank(H^{n - k}(M)) = b_{n - k}$.
+\end{proof}
 
 \end{document}
