@@ -49,7 +49,7 @@
   {\renewcommand\theinnercustomthm{#1}\innercustomthm}
   {\endinnercustomthm}
 
-\theoremstyle{remar}
+\theoremstyle{rem}
 \newtheorem*{rem}{Remark}
 \newtheorem{rems}[thm]{Remarks}
 \newtheorem{warn}[thm]{Warning}
@@ -221,6 +221,42 @@ There is a nice way to explicitly write down the isomorphism when $G$ is a commu
     \end{tikzcd}
   \end{center}
 \end{defn}
+
+\begin{thm}
+  $\partial (\sigma \frown \phi) = (-1)^l((\partial \sigma) \frown \phi - \sigma \frown (\partial \phi))$.
+\end{thm}
+
+\begin{proof}
+  Let $k \geq l, \sigma \in C_{k + 1}(X; R), \phi \in C^l(X; R)$ be given.
+  \begin{align*}
+    (\partial \sigma) \frown \phi
+      &= (\sum_{j} (-1)^j \sigma\vert_{[v_0, \cdots, \hat{v}_j, \cdots, v_k]}) \frown \phi \\
+      &= \sum_{j} (-1)^j (\sigma\vert_{[v_0, \cdots, \hat{v}_j, \cdots, v_k]} \frown \phi) \\
+      &= \sum_{j = 1}^l (-1)^j \phi(\sigma\vert_{[v_0, \cdots, \hat{v}_j, \cdots, v_{l + 1}]})\sigma\vert_{[v_{l + 1}, \cdots, v_k]}
+         + \sum_{j = l + 1}^{k} (-1)^j \phi(\sigma\vert_{[v_0, \cdots, v_{l}]})\sigma\vert_{[v_l, \cdots, \hat{v}_j, \cdots, v_k]} \\
+      &= \sum_{j = 1}^l (-1)^j \phi(\sigma\vert_{[v_0, \cdots, \hat{v}_j, \cdots, v_{l + 1}]})\sigma\vert_{[v_{l + 1}, \cdots, v_k]} 
+         + (-1)^{l + 1}\phi(\sigma\vert_{[v_0, \cdots, v_l, \hat{v}_{l + 1}]})\sigma\vert_{[v_{l + 1}, \cdots, v_k]} \\
+      &+ (-1)^{l}\phi(\sigma\vert_{[v_0, \cdots, v_l]})\sigma\vert_{[\hat{v}_l, v_{l + 1}, \cdots, v_k]}
+         + \sum_{j = l + 1}^{k} (-1)^j \phi(\sigma\vert_{[v_0, \cdots, v_{l}]})\sigma\vert_{[v_l, \cdots, \hat{v}_j, \cdots, v_k]} \\
+      &= \sum_{j = 1}^{l + 1} (-1)^j \phi(\sigma\vert_{[v_0, \cdots, \hat{v}_j, \cdots, v_{l + 1}]})\sigma\vert_{[v_{l + 1}, \cdots, v_k]} 
+         + \sum_{j = l}^{k} (-1)^j \phi(\sigma\vert_{[v_0, \cdots, v_{l}]})\sigma\vert_{[v_l, \cdots, \hat{v}_j, \cdots, v_k]}.
+  \end{align*}
+  We will compute each summand.
+  \begin{align*}
+    \sum_{j = 1}^{l + 1} (-1)^j \phi(\sigma\vert_{[v_0, \cdots, \hat{v}_j, \cdots, v_{l + 1}]})\sigma\vert_{[v_{l + 1}, \cdots, v_k]} 
+      &= \phi(\sum_{j = 1}^{l + 1} (-1)^j \sigma\vert_{[v_0, \cdots, \hat{v}_j, \cdots, v_{l + 1}]})\sigma\vert_{[v_{l + 1}, \cdots, v_k]} \\
+      &= \phi(\partial \sigma\vert_{[v_0, \cdots, v_{l + 1}]})\sigma\vert_{[v_{l + 1}, \cdots, v_k]} \\
+      &= \sigma \frown \delta\phi.
+  \end{align*}
+  On the other hand,
+  \begin{align*}
+    \sum_{j = l}^{k} (-1)^j \phi(\sigma\vert_{[v_0, \cdots, v_{l}]})\sigma\vert_{[v_l, \cdots, \hat{v}_j, \cdots, v_k]}
+      &= (-1)^l \sum_{j = 0}^{k - l} (-1)^j \phi(\sigma\vert_{[v_0, \cdots, v_{l + j}]})\sigma\vert_{[v_l, \cdots, \hat{v}_{l + j}, \cdots, v_k]} \\
+      &= (-1)^l \partial(\phi(\sigma\vert_{[v_0, \cdots, v_{l + j}]})\sigma\vert_{[v_l, \cdots, v_k]}) \\
+      &= (-1)^l \partial(\sigma \frown \phi).
+  \end{align*}
+  Therefore, we obtain the desired result $\partial (\sigma \frown \phi) = (-1)^l((\partial \sigma) \frown \phi - \sigma \frown (\delta \phi))$.
+\end{proof}
 
 
 \end{document}
