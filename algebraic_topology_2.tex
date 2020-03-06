@@ -222,7 +222,7 @@ There is a nice way to explicitly write down the isomorphism when $G$ is a commu
   \end{center}
 \end{defn}
 
-\begin{thm}
+\begin{thm}\label{cap_product_formula}
   $\partial (\sigma \frown \phi) = (-1)^l((\partial \sigma) \frown \phi - \sigma \frown (\partial \phi))$.
 \end{thm}
 
@@ -258,5 +258,15 @@ There is a nice way to explicitly write down the isomorphism when $G$ is a commu
   Therefore, we obtain the desired result $\partial (\sigma \frown \phi) = (-1)^l((\partial \sigma) \frown \phi - \sigma \frown (\delta \phi))$.
 \end{proof}
 
+\begin{thm}
+  $\frown: C_k(X; R) \otimes C^l(X; R) \rightarrow C_{k - l}(X; R)$ induces a map $H_k(X; R) \otimes H^l(X; R) \rightarrow H_{k - l}(X; R)$.
+\end{thm}
+
+\begin{proof}
+  Let $[\sigma] \in H_k(X; R)$ and $[\phi] \in H^l(X; R)$ be given where $\sigma \in C_k(X; R)$ and $\phi \in C^l(X; R)$.
+  Then $\partial(\sigma) = \delta(\phi) = 0$.
+  By (\ref{cap_product_formula}), $\partial(\sigma \frown \phi) = (-1)^l(0 - 0) = 0$.
+  Therefore, $\sigma \frown \phi$ represents a class in $H_{k - l}(X; R)$.
+\end{proof}
 
 \end{document}
