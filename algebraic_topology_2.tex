@@ -269,4 +269,28 @@ There is a nice way to explicitly write down the isomorphism when $G$ is a commu
   Therefore, $\sigma \frown \phi$ represents a class in $H_{k - l}(X; R)$.
 \end{proof}
 
+\subsection{Poincare Duality(Version 2)}
+
+\begin{thm}\label{poincare_duality_2}
+  If $M$ is an orientable closed $n$-manifold, let $[M] \in H_n(M)$ be a fundamental class for $M$, and let $R$ be a commutative ring.
+  View $[M] \in H_n(M; R)$.
+  Then the map
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      H^l(M; R) \arrow[r] & H_{n - l}(M; R) \\
+      \phi \arrow[r, maps to] & \left[M\right] \frown \phi
+    \end{tikzcd}
+  \end{center}
+  is an $R$-module isomorphism.
+
+  If $M$ is not orientable, then $[M] \in H_n(M; \mathbb{Z} / 2)$ still exists, and we have
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      H^l(M; \mathbb{Z} / 2) \arrow[r] & H_{n - l}(M; \mathbb{Z} / 2) \\
+      \phi \arrow[r, maps to] & \left[M\right] \frown \phi
+    \end{tikzcd}
+  \end{center}
+
+\end{thm}
+
 \end{document}
