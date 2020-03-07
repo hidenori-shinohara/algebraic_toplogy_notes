@@ -67,6 +67,7 @@
 \DeclareMathOperator{\bd}{bd}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\PD}{PD}
 
 \makeatletter
 \let\c@equation\c@thm
@@ -121,7 +122,18 @@
     (the number of times $\gamma$ enters $\sigma$) - (the number of times $\gamma$ exists $\sigma$)
   \end{center}
   which is always 0 for any 2-simplex $\sigma$ and any closed oriented curve $\gamma$.
+  In this case, we call $\phi$ the \textbf{Poincare dual} to $\gamma$, or simply $\phi = \PD(\gamma)$, and this concept can be generalized further.
 \end{exmp}
+
+\begin{defn}
+  Let $X$ be a topological manifold of dimension $n$.
+  Let $\gamma$ be an $(n - k)$-cycle in $X$ transverse to the $k$-skeleton of $X$.
+  Define $\phi \in C^{k}(X; \mathbb{Z})$ such that
+  \begin{align*}
+    \phi(\sigma) &= \text{The number of intersections between $\sigma$ and $\gamma$ with signs}.
+  \end{align*}
+  Then we call $\phi$ the \textbf{Poincare dual} of $\gamma$ and denote it by $\phi = \PD(\gamma)$.
+\end{defn}
 
 \section{Poincare Duality}
 
