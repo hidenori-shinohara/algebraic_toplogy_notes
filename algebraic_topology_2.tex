@@ -83,6 +83,46 @@
 \maketitle
 \tableofcontents
 
+\section{Geometric Description of Cocycles}
+
+\begin{exmp}
+  Let $X$ be a $\Delta$-complex and $\phi \in C^k(X; \mathbb{Z})$.
+  What does it mean that $\delta \phi = 0$?
+  As a toy model, we will consider a surface.
+  One way to construct such a $\phi \in C^1(X; \mathbb{Z})$ is to take an oriented closed curve $\gamma$ transverse to 1-simplices.
+  Then we define $\phi(\sigma)$ to be the number of intersections between $\sigma$ and $\gamma$ with signs.
+  See the following example:
+
+  \begin{figure}[!htb]
+    \includegraphics[width=.7\linewidth]{img/geometric_description_cocycle.jpeg}
+    \caption{Oriented closed curve in a surface}
+    \label{fig:cocycle}
+  \end{figure}
+
+  $\gamma$ gives us the following 1-cocycle $\phi$ which maps each $e_i$ to an integer as following:
+  \begin{align*}
+    & e_1 \mapsto 1 \\
+    & e_2 \mapsto 1 - 1 + 1 = 1 \\
+    & e_3 \mapsto 1 \\
+    & e_4 \mapsto 0 \\
+    & e_5 \mapsto 0 \\
+    & e_6 \mapsto 0.
+  \end{align*}
+
+  Then $\delta\phi = 0$ because
+  \begin{align*}
+    (\delta\phi)(F_1) &= \phi(\partial F_1) = \phi(e_1) - \phi(e_2) + \phi(e_4) = 0 \\
+    (\delta\phi)(F_2) &= \phi(\partial F_2) = \phi(e_3) - \phi(e_2) + \phi(e_5) = 0 \\
+    (\delta\phi)(F_3) &= \phi(\partial F_3) = \phi(e_1) - \phi(e_3) + \phi(e_6) = 0.
+  \end{align*}
+
+  This is not a coincidence because $\phi(\partial\sigma)$ represents 
+  \begin{center}
+    (the number of times $\gamma$ enters $\sigma$) - (the number of times $\gamma$ exists $\sigma$)
+  \end{center}
+  which is always 0 for any closed oriented curve $\gamma$.
+\end{exmp}
+
 \section{Poincare Duality}
 
 Since $H^{\ast}(T^n) \equiv \wedge_{\mathbb{Z}} M$ where $M = \ev{ v_1, \cdots, v_n }$, we have
@@ -290,7 +330,6 @@ There is a nice way to explicitly write down the isomorphism when $G$ is a commu
       \phi \arrow[r, maps to] & \left[M\right] \frown \phi
     \end{tikzcd}
   \end{center}
-
 \end{thm}
 
 \end{document}
