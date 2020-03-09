@@ -225,9 +225,25 @@
       &= \phi_1(\alpha_1)\phi_2(\alpha_2) \\
       &= 0.
   \end{align*}
-  Therefore, $[\phi_1 \smile \phi_2] = [\sigma_1^{\ast}]$.
+  Recall that $[\sigma_1^{\ast} + \sigma_2^{\ast}] = 0$ because $\sigma_1^{\ast} + \sigma_2^{\ast}$ is in the kernel.
+  Therefore, $[\phi_1 \smile \phi_2] = [-\sigma_1^{\ast}] = [\sigma_2^{\ast}]$.
   Similarly, we obtain $(\phi_2 \smile \phi_1)(\sigma_1) = 0$ and $(\phi_2 \smile \phi_1)(\sigma_2) = -1$.
-  Thus $[\phi_2 \smile \phi_1] = -[\sigma_1^{\ast}]$.
+  Thus $[\phi_2 \smile \phi_1] = -[\sigma_2^{\ast}]$.
+
+  \todo[inline,caption={}]{
+    I don't understand the alternative approach using the universal coefficient theorem.
+  }
+
+  Finally, we obtain the following multiplication table for $H^{\ast}(T^2; \mathbb{Z}) \cong \mathbb{Z}\ev{1, [\phi_1], [\phi_2], [\sigma_2^{\ast}]}$:
+  \begin{center}
+    \begin{tabular}{| l || l | l | l | l |} \hline
+      $\smile$   & 1          & $[\phi_1]$           & $[\phi_2]$          & $[\sigma_2^{\ast}]$ \\ \hline
+      1          & 1          & $[\phi_1]$           & $[\phi_2]$          & $[\sigma_2^{\ast}]$ \\ 
+      $[\phi_1]$ & $[\phi_1]$ & 0                    & $[\sigma_2^{\ast}]$ & 0 \\ 
+      $[\phi_2]$ & $[\phi_2]$ & $-[\sigma_2^{\ast}]$ & 0                   & 0 \\
+      $[\sigma_2^{\ast}]$ & $[\sigma_2^{\ast}]$ & 0                    & 0                   & 0 \\ \hline
+    \end{tabular}
+  \end{center}
 \end{exmp}
 
 \section{Poincare Duality}
