@@ -211,6 +211,23 @@
   \end{align*}
   Therefore, the classes represented by $\phi_1, \phi_2$ are in $H^1(T^2; \mathbb{Z})$.
   Moreover, they clearly generate $H^1(T^2; \mathbb{Z})$, so every element in $H^1(T^2; \mathbb{Z})$ can be considered as a function with a fixed closed curve that counts the number of times the curve intersects a given 1-simplex.
+
+  Now, we will examine the cup product structure.
+  By definition, we know that $[\phi_1] \smile [\phi_2] \in H^2(T^2; \mathbb{Z})$.
+  Therefore, we will check what $\sigma_1, \sigma_2$ get sent to.
+  \begin{align*}
+    (\phi_1 \smile \phi_2)(\sigma_1)
+      &= \phi_1(\sigma_1\vert_{[0, 1]})\phi_2(\sigma_1\vert_{[1, 2]}) \\
+      &= \phi_1(\alpha_2)\phi_2(\alpha_1) \\
+      &= -1 \cdot 1 = -1. \\
+    (\phi_1 \smile \phi_2)(\sigma_2)
+      &= \phi_1(\sigma_2\vert_{[0, 1]})\phi_2(\sigma_2\vert_{[1, 2]}) \\
+      &= \phi_1(\alpha_1)\phi_2(\alpha_2) \\
+      &= 0.
+  \end{align*}
+  Therefore, $[\phi_1 \smile \phi_2] = [\sigma_1^{\ast}]$.
+  Similarly, we obtain $(\phi_2 \smile \phi_1)(\sigma_1) = 0$ and $(\phi_2 \smile \phi_1)(\sigma_2) = -1$.
+  Thus $[\phi_2 \smile \phi_1] = -[\sigma_1^{\ast}]$.
 \end{exmp}
 
 \section{Poincare Duality}
