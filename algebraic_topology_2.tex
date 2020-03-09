@@ -157,6 +157,31 @@
       \mathbb{Z}^2 & (i = 1).
     \end{cases}
   \end{align*}
+  Now, we will examine the cellular cochain complex.
+  \begin{align*}
+    \delta(v^{\ast})(\alpha_i)
+      &= v^{\ast}(\partial \alpha_i) \\
+      &= v^{\ast}(0) \\
+      &= 0
+  \end{align*}
+  for any $\alpha_i \in C_1$.
+  Therefore, $\delta(v^{\ast}) = 0$.
+  \begin{align*}
+    \delta(\alpha_1^{\ast})(\sigma_i)
+      &= \alpha_1^{\ast}(\partial(\sigma_i)) \\
+      &= \alpha_1^{\ast}(\alpha_1 + \alpha_2 - \alpha_3) \\
+      &= 1
+  \end{align*}
+  for any $\sigma_i \in C_2$.
+  By performing similar calculation on $\alpha_2^{\ast}$ and $\alpha_3^{\ast}$, we obtain
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      C^2 = \ev{\sigma_1^{\ast}, \sigma_2^{\ast}} & C^1 = \ev{\alpha_1^{\ast}, \alpha_2^{\ast}, \alpha_3^{\ast}} \arrow[l] & C^0 = \ev{v^{\ast}} \arrow[l] \\
+      \sigma_1^{\ast} + \sigma_2^{\ast}           & \alpha_1^{\ast}, \alpha_2^{\ast} \arrow[l, maps to]                    & \\
+      -(\sigma_1^{\ast} + \sigma_2^{\ast})        & \alpha_3^{\ast} \arrow[l, maps to]                                     & \\
+                                                  & 0                                                                      & v^{\ast} \arrow[l, maps to] \\
+    \end{tikzcd}
+  \end{center}
 \end{exmp}
 
 \section{Poincare Duality}
