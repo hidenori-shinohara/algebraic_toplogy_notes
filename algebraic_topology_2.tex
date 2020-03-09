@@ -135,6 +135,30 @@
   Then we call $\phi$ the \textbf{Poincare dual} of $\gamma$ and denote it by $\phi = \PD(\gamma)$.
 \end{defn}
 
+\begin{exmp}
+  We will look at a torus which is a slightly more complicated example.
+  \begin{figure}[!htb]
+    \includegraphics[width=.5\linewidth]{img/torus.jpeg}
+    \caption{Torus}
+    \label{fig:torus}
+  \end{figure}
+  We obtain the following cellular chain complex from Figure \ref{fig:torus}:
+  \begin{center}
+    \begin{tikzcd}[cells={nodes={minimum height=2em}}]
+      C_2 = \ev{\sigma_1, \sigma_2} \arrow[r] & C_1 = \ev{\alpha_1, \alpha_2, \alpha_3} \arrow[r] & C_0 = \ev{v} \\
+      \sigma_i \arrow[r, maps to]             & \alpha_1 + \alpha_2 + \alpha_3                    & \\
+                                              & \alpha_i \arrow[r, maps to]                       &  0 \\
+    \end{tikzcd}
+  \end{center}
+  Thus
+  \begin{align*}
+    H_i(T^2) &= \begin{cases}
+      \mathbb{Z}   & (i = 0, 2) \\
+      \mathbb{Z}^2 & (i = 1).
+    \end{cases}
+  \end{align*}
+\end{exmp}
+
 \section{Poincare Duality}
 
 Since $H^{\ast}(T^n) \equiv \wedge_{\mathbb{Z}} M$ where $M = \ev{ v_1, \cdots, v_n }$, we have
