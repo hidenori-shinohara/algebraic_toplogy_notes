@@ -491,4 +491,15 @@ There is a nice way to explicitly write down the isomorphism when $G$ is a commu
   Moreover, $\Omega^{\ast}(U) = \oplus_{k=1}^{n} \Omega^k(U)$ where $\Omega^k(U) = \{ \sum_{\abs{I} = k} f_Idx_I \}$.
   Finally, for any $\omega_1 \in \Omega^{k_1}(U), \omega_2 \in \Omega^{k_2}(U), \omega_1 \wedge \omega_2 = (-1)^{k_1k_2} \omega_2 \wedge \omega_1$.
 \end{proof}
+
+\begin{defn}
+  The exterior derivative $d: \Omega^k(U) \rightarrow \Omega^{k + 1}(U)$ is defined as following:
+  \begin{itemize}
+    \item
+      For any $f \in \Omega^0(U)$, $df = \sum_{i=1}^{n} \frac{\partial f}{\partial x_i} dx_i$.
+    \item
+      For any $\omega \in \sum f_Idx_I$, $d\omega = \sum df_I \wedge dx_I$.
+  \end{itemize}
+\end{defn}
+
 \end{document}
