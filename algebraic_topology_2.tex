@@ -474,4 +474,21 @@ There is a nice way to explicitly write down the isomorphism when $G$ is a commu
   Then there are exactly $2^n$ $I$'s, so the dimension is $2^n$.
 \end{proof}
 
+\begin{defn}
+  Let $U \subset \mathbb{R}^n$ be open.
+  Then $\Omega^{\ast}(U) = C^{\infty}(U) \otimes \Omega^{\ast}$.
+\end{defn}
+
+\begin{lem}
+  $\Omega^{\ast}(U)$ is a graded, sign-commutative $\mathbb{R}$-algebra.
+\end{lem}
+
+\begin{proof}
+  $\Omega^{\ast}(U)$ is a vector space over $\mathbb{R}$ because addition can be defined in a trivial way and for any $c \in \mathbb{R}$ and $f \otimes dx_I \in \Omega^{\ast}(U)$, $c(f \otimes dx_I) = (cf) \otimes dx_I$.
+  Moreover, $(f_Idx_I) \wedge (f_Jdx_J) = (f_If_J)(dx_I \wedge dx_J)$ is a well-defined multiplication.
+  It is easy to see that the multiplication, addition and scalar multiplication commute.
+  Thus $\Omega^{\ast}(U)$ is a $\mathbb{R}$-algebra.
+  Moreover, $\Omega^{\ast}(U) = \oplus_{k=1}^{n} \Omega^k(U)$ where $\Omega^k(U) = \{ \sum_{\abs{I} = k} f_Idx_I \}$.
+  Finally, for any $\omega_1 \in \Omega^{k_1}(U), \omega_2 \in \Omega^{k_2}(U), \omega_1 \wedge \omega_2 = (-1)^{k_1k_2} \omega_2 \wedge \omega_1$.
+\end{proof}
 \end{document}
